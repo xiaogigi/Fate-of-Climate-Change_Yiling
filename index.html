@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fate of Climate Change</title>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/elt4lwm.css">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+		body {margin: 0; background:#FCD9C8; }
+		
+		.header{
+			position: fixed;
+			top: 0;
+			z-index: 1;
+			width: 100%;
+			background-color: #f1f1f1;
+		}
+		
+		.progress-container{
+			width: 100%;
+			height: 8px;
+			background: #ccc;
+		}
+		
+		.progress-bar{
+			height: 8px;
+			background: #C6694A;
+			width: 0%
+		}
+		
+		#will{
+/*			position: fixed;*/
+			margin-top: 300px;
+			margin-left: 200px;
+		}
+		
+		#page1{
+			margin-top: -350px;
+			margin-left: 500px;
+		}
+		
+		#header1{
+			  font-family: ltc-bodoni-175,serif;
+                font-weight: 400;
+                font-style: normal;
+			font-size:35px;
+/*                position: fixed;*/
+              
+                width: 500px;
+		}
+		
+		#content{
+			  font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: lighter;
+                font-style: normal;
+               margin-top: 50px;
+                width: 800px;
+			line-height: 2;
+		}
+		
+		#will2{
+			margin-top: 600px;
+			margin-left: 200px;
+		}
+		
+		#header2{
+			margin-top: -350px;
+			margin-left: 500px;
+			font-family: ltc-bodoni-175,serif;
+                font-weight: 400;
+                font-style: normal;
+			font-size:35px;
+/*width: 500px;*/
+		}
+		
+		#content2{
+			margin-top: 50px;
+			margin-left: 500px;
+			padding-bottom: 500px;
+			 font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: lighter;
+                font-style: normal;
+			width: 800px;
+			line-height: 2;
+		}
+		
+		#will3{
+			margin-top: 600px;
+			margin-left: 200px;
+		}
+		
+		#tree{
+			margin-top: -700px;
+			margin-left: 800px;
+		}
+		
+		#content3{
+			margin-top: -150px;
+			margin-left: 370px;
+			padding-bottom: 500px;
+			 font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: lighter;
+                font-style: normal;
+			width: 400px;
+			line-height: 2;
+		}
+		
+		#will4{
+			margin-top: 600px;
+			margin-left: 200px;
+		}
+		
+		#tree2{
+			margin-top: -700px;
+			margin-left: 800px;
+		}
+		
+		#tree-pic{
+			margin-top: -950px;
+			margin-left: 1000px;
+		}
+		
+		#will5{
+			margin-top: 1800px;
+			margin-left: 200px;
+		}
+		#tree3{
+			margin-top: -700px;
+			margin-left: 700px;
+		}
+		#content4{
+			margin-top: -100px;
+			margin-left: 370px;
+			padding-bottom: 500px;
+			 font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: lighter;
+                font-style: normal;
+			width: 400px;
+			line-height: 2;
+		}
+		
+		#carbon-storage{
+			margin-top: -1050px;
+			margin-left: 350px;
+		}
+		
+		#tree-pic2{
+			margin-top: -150px;
+			margin-left: 1050px;
+		}
+		
+		#will6{
+			margin-top: 2000px;
+			margin-left: 200px;
+		}
+		#tree4{
+			margin-top: -700px;
+			margin-left: 700px;
+		}
+		
+		#content5{
+			margin-top: -150px;
+			margin-left: 370px;
+			padding-bottom: 500px;
+			 font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: lighter;
+                font-style: normal;
+			width: 400px;
+			line-height: 2;
+		}
+		
+		#farmer{
+			margin-top: -1300px;
+			margin-left: 1000px;
+		}
+		#carbon-storage2{
+/*			margin-top: -1050px;*/
+			margin-left: 350px;
+		}
+		
+		#tree-pic3{
+			margin-top: -150px;
+			margin-left: 1050px;
+		}
+		
+		#will7{
+				margin-top: 1800px;
+			margin-left: 200px;
+		}
+		#tree5{
+			margin-top: -700px;
+			margin-left: 700px;
+		}
+		
+		#content6{
+			margin-top: -150px;
+			margin-left: 370px;
+			padding-bottom: 500px;
+			 font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: lighter;
+                font-style: normal;
+			width: 400px;
+			line-height: 2;
+		}
+		
+		#will8{
+			margin-top: 600px;
+			margin-left: 200px;
+		}
+		#header3{
+			  font-family: ltc-bodoni-175,serif;
+                font-weight: 400;
+                font-style: normal;
+			font-size:35px;
+			margin-top: -350px;
+			margin-left: 500px;
+		}
+		#content7{
+				margin-top: 50px;
+			margin-left: 500px;
+			padding-bottom: 500px;
+			 font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: lighter;
+                font-style: normal;
+			width: 800px;
+			line-height: 2;
+		}
+		
+		#will9{
+			margin-top: 600px;
+			margin-left: 200px;
+		}
+		#header4{
+			  font-family: ltc-bodoni-175,serif;
+                font-weight: 400;
+                font-style: normal;
+			font-size:35px;
+			margin-top: -350px;
+			margin-left: 500px;
+		}
+		#content8{
+				margin-top: 50px;
+			margin-left: 500px;
+			padding-bottom: 500px;
+			 font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: lighter;
+                font-style: normal;
+			width: 400px;
+			line-height: 2;
+		}
+		
+		#bum{
+			margin-top: -700px;
+			margin-left: 1100px;
+		}
+		
+		#will10{
+			margin-top: 600px;
+			margin-left: 200px;
+		}
+		#header5{
+			  font-family: ltc-bodoni-175,serif;
+                font-weight: 400;
+                font-style: normal;
+			font-size:35px;
+			margin-top: -350px;
+			margin-left: 500px;
+		}
+		#content9{
+				margin-top: 50px;
+			margin-left: 500px;
+			padding-bottom: 500px;
+			 font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: lighter;
+                font-style: normal;
+			width: 800px;
+			line-height: 2;
+		}
+		
+		#start{
+			margin-top: -450px;
+			margin-left: 670px;
+		}
+		
+			#will11{
+				margin-top: 1600px;
+			margin-left: 200px;
+		}
+		#tree6{
+			margin-top: -700px;
+			margin-left: 700px;
+		}
+		
+		#content10{
+			margin-top: -150px;
+			margin-left: 370px;
+			padding-bottom: 500px;
+			 font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: lighter;
+                font-style: normal;
+			width: 400px;
+			line-height: 2;
+		}
+    
+    </style>
+</head>
+
+<body>
+	<div class="header">
+	<div class="progress-container">
+	<div class="progress-bar" id="myBar"></div>
+	</div>
+	</div>
+	
+	
+	
+	<div data-aos="fade-right" id="will">
+		<img src="img/will.png" width="200">
+		</div>
+	<div id="page1" data-aos="fade-up">
+			<div id="header1">
+	FATE OF CLIMATE CHANGE
+	</div>
+		<div id="content">
+	Hi, welcome to Fate of Climate Change. This is a website which can help you get a better understanding of how humans could deal with climate change, and how we could escape from the fate of extinction.
+	</div>
+	</div>
+	
+	<div data-aos="fade-right" id="will2">
+	<img src="img/will.png" width="200">
+	</div>
+
+	<div data-aos="fade-down" id="header2">
+	FATE OF CLIMATE CHANGE
+	</div>
+	
+	<div data-aos="fade-up" id="content2">
+			You might think climate change is irreversible at this point. Humans are doomed. But I’m here to tell you, humans still have time, POLITICS is able to save the world.
+	</div>
+	
+	<div id="will3" data-aos="fade-right">
+	<img src="img/will-2.png" width="150">
+	</div>
+	<div id="tree" data-aos="fade-left">
+	<img src="img/tree2.png" width="80">
+	</div>
+	<div id="content3" data-aos="fade-up">
+	From denial and inaction just two decades ago, countries now dare to think big. The world is full now of major initiatives. 
+	</div>	
+	
+	<div id="will4" data-aos="fade-right">
+	<img src="img/will-2.png" width="150">
+	</div>
+	<div id="tree2" data-aos="fade-left">
+	<img src="img/tree3.png" width="170">
+	</div>
+	<div id="content3" data-aos="fade-up">
+	Many countries, for example, are furiously planting trees.
+	</div>
+	<div id="tree-pic" data-aos="fade-left">
+    <img src="img/Christmas_tree_farm.jpg" width="251">
+	</div>
+	
+	<div id="will5" data-aos="fade-right">
+	<img src="img/will-2.png" width="150">
+	</div>
+	<div id="tree3" data-aos="fade-left">
+	<img src="img/tree4.png" width="300">
+	</div>
+	<div id="content4" data-aos="fade-up">
+	Carbon capture and storage to take the emissions of fossil fuels is becoming a reality.
+	</div>
+	<div id="carbon-storage" data-aos="fade-right">
+	<img src="img/boundary-dam-ccs-project.png" width="310">
+	</div>
+	<div id="tree-pic2" data-aos="fade-left">
+    <img src="img/Christmas_tree_farm.jpg" width="251">
+	</div>
+	
+	<div id="will6" data-aos="fade-right">
+	<img src="img/will-2.png" width="150">
+	</div>
+	<div id="tree4" data-aos="fade-left">
+	<img src="img/tree5.png" width="300">
+	</div>
+	<div id="content5" data-aos="fade-up">
+	Millions of rice farmers have adopted the system of rice intensification which halves the water needed and reduces methane emissions from rice cultivation by up to 50%.
+	</div>
+	<div id="farmer" data-aos="fade-left">
+	<img src="img/sri1.jpg" width="385">
+	</div>
+	<div id="carbon-storage2" data-aos="fade-right">
+	<img src="img/boundary-dam-ccs-project.png" width="310">
+	</div>
+	<div id="tree-pic3" data-aos="fade-left">
+    <img src="img/Christmas_tree_farm.jpg" width="251">
+	</div>
+	
+	<div id="will7" data-aos="fade-right">
+	<img src="img/will-2.png" width="150">
+	</div>
+	<div id="tree5" data-aos="fade-left">
+	<img src="img/tree5.png" width="300">
+	</div>
+	<div id="content6" data-aos="fade-up">
+There are seeds of change, lifting ambition, inspiring hope and showing the potential for change on a planetary scale.
+	</div>
+	
+	<div id="will11" data-aos="fade-right">
+	<img src="img/will-2.png" width="150">
+	</div>
+	<div id="tree6" data-aos="fade-left">
+	<img src="img/tree5.png" width="300">
+	</div>
+	<div id="content10" data-aos="fade-up">
+But these and many others are, so far, only incremental initiatives, coming far too slowly to even brake the warming.
+	</div>
+	
+	<div id="will8" data-aos="fade-right">
+	<img src="img/will.png" width="200">
+	</div>
+	<div data-aos="fade-down" id="header3">
+	FATE OF CLIMATE CHANGE
+	</div>
+	<div id="content7" data-aos="fade-up">
+	This website is a game aimed to help people understand the relationship between politics and climate change. Only if the people bring awareness to this cause will politicians start to address the greatest challenge human kind will ever face.
+	</div>
+	
+	<div id="will9" data-aos="fade-right">
+	<img src="img/will.png" width="200">
+	</div>
+	<div data-aos="fade-down" id="header4">
+	FATE OF CLIMATE CHANGE
+	</div>
+	<div id="content8" data-aos="fade-up">
+They will see that people are up for the challenge. If they then don’t respond with urgency, we are not just metaphorically in the soup, we may literally be cooked.
+	</div>
+	<div id="bum" data-aos="fade-left">
+	<img src="img/bum.jpeg" width="300">
+	</div>
+	
+	<div id="will10" data-aos="fade-right">
+	<img src="img/will.png" width="200">
+	</div>
+	<div data-aos="fade-down" id="header5">
+	FATE OF CLIMATE CHANGE
+	</div>
+	<div id="content9" data-aos="fade-up">
+	Are you ready for the journey to reverse climate change?
+	</div>
+	
+	<a href="homepage.html">
+	<div id="start" data-aos="fade-up">
+	<img src="img/start.png" width="100">
+	</div>
+	</a>
+	
+ 
+</body>
+</html>
+
+<script>
+	window.onscroll = function(){scroll_bar()};
+	function scroll_bar(){
+		var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		var scrolled = (winScroll / height) * 100;
+		document.getElementById("myBar").style.width = scrolled + "%";
+	}
+		 AOS.init({
+  duration: 1200
+});
+	</script>

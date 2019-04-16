@@ -1,0 +1,1904 @@
+ body {margin: 0; background:#FCD9C8; }
+
+            @font-face{
+                font-family:segoePrint;
+                src: url(fonts/segoepr.ttf);
+            }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#greeting{
+	 font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	font-size: 25px;
+                position: absolute;
+	left: 500px;
+	top: 100px;
+	width: 800px;
+	line-height: 2;
+/*	animation: fade-out 1s ease-out both;;*/
+	
+}
+        
+         #head{
+                font-family: ltc-bodoni-175,serif;
+                font-weight: 400;
+                font-style: normal;
+                position: absolute;
+                left: 600px;
+                top: 300px;
+                width: 500px;
+/*             display: none;*/
+            }
+
+#head2{
+     font-family: ltc-bodoni-175,serif;
+                font-weight: 400;
+                font-style: normal;
+                position: absolute;
+                left: 600px;
+                top: 80px;
+                width: 500px;
+	display: none;
+	z-index: 1;
+	cursor: pointer;
+}
+        #bear1{
+/*            float: right;*/
+			position: absolute;
+			left: 1510px;
+			top: 5px;
+        }
+        
+        #bear2{
+/*
+             float: left;
+                bottom: 0px;
+*/
+                position: absolute;
+			top: 670px;
+        }
+        
+         #year_box{
+                width: 150px;
+                height: 15px;
+                background-color: #EFEFEF;
+                margin-top: 60px;
+                position: absolute;
+                left: 100px;
+                border-radius: 15px;
+            }
+            #year_bar{
+                height: 15px;
+                background-color: #2C5341;
+                width: 1%;
+                border-radius: 15px;
+            }
+            #year_text{
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                position: absolute;
+                left: 50px;
+                top: 41px;
+            }
+        
+         #signifier{
+                position: absolute;
+                top: 40px;
+                left: 90px;
+            }
+          #year_number{
+			    font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                position: absolute;
+                top: 90px;
+                left: 80px;
+            }
+        
+          #budget_box{
+                width: 150px;
+                height: 15px;
+                background-color: #EFEFEF;
+                margin-top: 50px;
+                position: absolute;
+                left: 100px;
+                top: 88px;
+                border-radius: 15px;
+            }
+            #budget_bar{
+                width: 150px;
+                height: 15px;
+                background-color: #2C5341;
+                border-radius: 15px;
+            }
+            #budget_text{
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                position: absolute;
+                left: 33px;
+                top: 119px;
+            }
+          #budget_number{
+			   font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                position: absolute;
+                top: 165px;
+                left: 220px;
+/*			  left: 100px;*/
+            }
+        
+         #bubble{
+                position: absolute;
+                left: 1400px;
+                top: 100px;
+/*
+			 float: right;
+			 margin-top: 100px;
+			 margin-right: -40px;
+*/
+			 cursor: pointer;
+            }
+        
+         #bubble p{
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                margin-top: -45px;
+                margin-left: 20px;
+            }
+        #bubble2{
+            position: absolute;
+            left: 245px;
+            top: 580px;
+			cursor: pointer;
+        }
+        
+        #bubble2 p{
+            font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            margin-top: -100px;
+                margin-left: 40px;
+        }
+
+#red_dot{
+	position: absolute;
+	left: 120px;
+	display: none;
+}
+        
+         #mitigate{
+                position: absolute;
+                top: 450px;
+                left: 590px;
+/*             display: none;*/
+			 cursor: pointer;
+            }
+
+            #mitigate p{
+                font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                position: absolute;
+                top: 20%;
+                left: 120%;
+                width: 400px;
+                
+            }
+
+            #adapt{
+                position: absolute;
+                top: 600px;
+                left: 590px;
+/*                display: none;*/
+				cursor: pointer;
+            }
+
+            #adapt p{
+                font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                position: absolute;
+                top: 20%;
+                left: 120%;
+                width: 400px;
+               
+            }
+
+/*tooltip*/
+.tooltiptext{
+	font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+	position: absolute;
+  z-index: 1;
+	left: 170px;
+	top: -20px;
+	padding: 20px 20px 20px 20px;
+}
+
+#year_box:hover .tooltiptext{
+	visibility: visible;
+}
+
+.tooltiptext2{
+	font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+	position: absolute;
+  z-index: 1;
+	left: 170px;
+	top: -20px;
+	padding: 20px 20px 20px 20px;
+}
+
+#budget_box:hover .tooltiptext2{
+	visibility: visible;
+}
+
+.tooltiptext3{
+	font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+	position: absolute;
+  z-index: 1;
+	left: -100px;
+	top: 100px;
+	padding: 20px 20px 20px 20px;
+}
+#bubble:hover .tooltiptext3{
+	visibility: visible;
+}
+
+.tooltiptext4{
+		font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+	position: absolute;
+  z-index: 1;
+	left: -100px;
+	top: 150px;
+	padding: 20px 20px 20px 20px;
+}
+
+#bubble2:hover .tooltiptext4{
+	visibility: visible;
+}
+
+.tooltiptext5{
+		font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+	position: absolute;
+  z-index: 1;
+	left: -400px;
+	top: 20px;
+	padding: 20px 20px 20px 20px;
+}
+
+#mitigate:hover .tooltiptext5{
+	visibility: visible;
+}
+
+.tooltiptext6{
+		font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+	position: absolute;
+  z-index: 1;
+	
+	top: 60px;
+	padding: 20px 20px 20px 20px;
+}
+
+#head2:hover .tooltiptext6{
+	visibility: visible;
+}
+
+/*adapt*/
+
+#awareness_box{
+    position: absolute;
+    top: 200px;
+    left: 250px;
+	display: none;
+	cursor: pointer;
+}
+
+#awareness_box h6{
+     font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 160px;
+    left: 40px;
+    width: 150px;
+    text-align: center;
+    line-height: 2;
+}
+
+#awareness_box p{
+      font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    text-align: center;
+}
+
+.awareness_explaination{
+	position: absolute;
+	opacity: 0;
+	 transition: .5s ease;
+}
+
+.explaination{
+	  font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+	color: aliceblue;
+	width: 150px;
+	top: 100px;
+	left: 40px;
+	line-height: 1.5;
+	
+}
+
+#awareness_box:hover .awareness_explaination{
+	 opacity: 1;
+}
+
+#power_box{
+    position: absolute;
+    top: 200px;
+    left: 700px;
+	display: none;
+	cursor: pointer;
+}
+
+#power_box h6{
+      font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 160px;
+    left: 40px;
+     text-align: center;
+    line-height: 2;
+    width: 150px;
+}
+
+#power_box p{
+    font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    text-align: center;
+} 
+
+.power_explaination{
+	position: absolute;
+	opacity: 0;
+	 transition: .5s ease;
+	z-index: 1;
+}
+
+.explaination2{
+	  font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+	color: aliceblue;
+	width: 150px;
+	top: 100px;
+	left: 40px;
+	line-height: 1.5;
+	
+}
+
+#power_box:hover .power_explaination{
+	 opacity: 1;
+}
+
+
+#emission_box{
+    position: absolute;
+    top: 200px;
+    left: 1150px;
+	display: none;
+	cursor: pointer;
+} 
+
+#emission_box h6{
+     font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 160px;
+    left: 40px;
+     text-align: center;
+    line-height: 2;
+    width: 150px;
+}
+
+#emission_box p{
+     font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    text-align: center;
+}
+
+#emission_popup{
+	position: absolute;
+	top: 400px;
+	left: 610px;
+	z-index: 1;
+	display: none;
+}
+
+#emission_popup p{
+	width: 300px;
+	 font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	color: #ffffff;
+    position: absolute;
+	top: 25px;
+	left: 50px;
+	line-height: 1.5;
+}
+
+#popup_button3{
+	position: absolute;
+	top: 200px;
+	left: 120px;
+	cursor: pointer;
+}
+
+#popup_button3 p{
+	position: absolute;
+	top: -13px;
+}
+
+.emission_explaination{
+	position: absolute;
+	opacity: 0;
+	 transition: .5s ease;
+	z-index: 1;
+}
+
+.explaination3{
+	  font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+	color: aliceblue;
+	width: 150px;
+	top: 100px;
+	left: 40px;
+	line-height: 1.5;
+	
+}
+
+#emission_box:hover .emission_explaination{
+	 opacity: 1;
+}
+
+
+#organization_box{
+    position: absolute;
+    top: 580px;
+    left: 480px;
+	display: none;
+	cursor: pointer;
+}
+
+#organization_box h6{
+     font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    text-align: center;
+    line-height: 2;
+    width: 150px;
+    top: 150px;
+    left: 40px;
+}
+
+#organization_box p{
+       font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    text-align: center;
+    line-height: 2;
+    width: 150px;
+    top: 260px;
+    left: 40px;
+}
+
+.organization_explaination{
+	position: absolute;
+	opacity: 0;
+	 transition: .5s ease;
+	z-index: 1;
+}
+
+.explaination4{
+	  font-size: 12px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+	color: aliceblue;
+	width: 150px;
+	top: 50px;
+	left: 40px;
+	line-height: 1.5;
+	
+}
+
+#organization_box:hover .organization_explaination{
+	 opacity: 1;
+}
+
+
+
+#transport_box{
+    
+      position: absolute;
+    top: 570px;
+    left: 950px;
+	display: none;
+	cursor: pointer;
+}
+
+#transport_box h6{
+    font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    text-align: center;
+    line-height: 2;
+    width: 150px;
+    top: 170px;
+    left: 45px;
+}
+
+#transport_box p{
+          font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    text-align: center;
+    line-height: 2;
+    width: 150px;
+    top: 260px;
+    left: 40px;
+}
+
+.transport_explaination{
+	position: absolute;
+	opacity: 0;
+	 transition: .5s ease;
+	z-index: 1;
+}
+
+.explaination5{
+	   font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+	color: aliceblue;
+	width: 150px;
+	top: 100px;
+	left: 40px;
+	line-height: 1.5;
+	
+}
+
+#transport_box:hover .transport_explaination{
+	 opacity: 1;
+}
+
+/*Adapt*/
+
+#migration_box{
+	 position: absolute;
+    top: 200px;
+    left: 250px;
+	display: none;
+	cursor: pointer;
+}
+
+#migration_box h6{
+	 font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 160px;
+    left: 40px;
+    width: 150px;
+    text-align: center;
+    line-height: 2;
+}
+
+#migration_box p{
+	 font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 230px;
+    left: 100px;
+    text-align: center;
+}
+
+.migration_explaination{
+	position: absolute;
+	opacity: 0;
+	 transition: .5s ease;
+}
+
+.explaination6{
+	  font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+	color: aliceblue;
+	width: 150px;
+	top: 100px;
+	left: 40px;
+	line-height: 1.5;
+	
+}
+
+#migration_box:hover .migration_explaination{
+	 opacity: 1;
+}
+
+#disease_box{
+	position: absolute;
+    top: 200px;
+    left: 700px;
+	display: none;
+	cursor: pointer;
+}
+
+#disease_box h6{
+	  font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 160px;
+    left: 40px;
+     text-align: center;
+    line-height: 2;
+    width: 150px;
+}
+
+#disease_box p{
+	 font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    text-align: center;
+}
+
+.disease_explaination{
+	position: absolute;
+	opacity: 0;
+	 transition: .5s ease;
+	z-index: 1;
+}
+
+.explaination7{
+	  font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+	color: aliceblue;
+	width: 150px;
+	top: 100px;
+	left: 40px;
+	line-height: 1.5;
+	
+}
+
+#disease_box:hover .disease_explaination{
+	 opacity: 1;
+}
+
+#water_box{
+	 position: absolute;
+    top: 200px;
+    left: 1150px;
+	display: none;
+	cursor: pointer;
+}
+
+#water_box h6{
+	 font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 160px;
+    left: 40px;
+     text-align: center;
+    line-height: 2;
+    width: 150px;
+}
+
+#water_box p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    text-align: center;
+}
+
+.water_explaination{
+	position: absolute;
+	opacity: 0;
+	 transition: .5s ease;
+	z-index: 1;
+}
+
+.explaination8{
+	  font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+	color: aliceblue;
+	width: 150px;
+	top: 100px;
+	left: 40px;
+	line-height: 1.5;
+	
+}
+
+#water_box:hover .water_explaination{
+	 opacity: 1;
+}
+
+
+#bioengineering_box{
+	 position: absolute;
+    top: 580px;
+    left: 480px;
+	display: none;
+	cursor: pointer;
+}
+
+#bioengineering_box h6{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    text-align: center;
+    line-height: 2;
+    width: 150px;
+    top: 150px;
+    left: 40px;
+}
+
+#bioengineering_box p{
+	  font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    text-align: center;
+    line-height: 2;
+    width: 150px;
+    top: 260px;
+    left: 40px;
+}
+
+.bioengineering_explaination{
+	position: absolute;
+	opacity: 0;
+	 transition: .5s ease;
+	z-index: 1;
+}
+
+.explaination9{
+	  font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+	color: aliceblue;
+	width: 150px;
+	top: 100px;
+	left: 40px;
+	line-height: 1.5;
+	
+}
+
+#bioengineering_box:hover .bioengineering_explaination{
+	 opacity: 1;
+}
+
+
+#child_box{
+	 position: absolute;
+    top: 570px;
+    left: 950px;
+	display: none;
+	cursor: pointer;
+}
+
+#child_box h6{
+	  font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    text-align: center;
+    line-height: 2;
+    width: 150px;
+    top: 170px;
+    left: 45px;
+}
+
+#child_box p{
+	 font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+    text-align: center;
+    line-height: 2;
+    width: 150px;
+    top: 260px;
+    left: 40px;
+}
+
+.child_explaination{
+	position: absolute;
+	opacity: 0;
+	 transition: .5s ease;
+	z-index: 1;
+}
+
+.explaination10{
+	   font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+    position: absolute;
+	color: aliceblue;
+	width: 150px;
+	top: 100px;
+	left: 40px;
+	line-height: 1.5;
+	
+}
+
+#child_box:hover .child_explaination{
+	 opacity: 1;
+}
+
+#child_popup{
+	position: absolute;
+	top: 400px;
+	left: 610px;
+	z-index: 1;
+	display: none;
+}
+#child_popup p{
+	width: 300px;
+	 font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	color: #ffffff;
+    position: absolute;
+	top: 25px;
+	left: 50px;
+	line-height: 1.5;
+}
+
+#popup_button4{
+	position: absolute;
+	top: 200px;
+	left: 120px;
+	cursor: pointer;
+}
+
+#popup_button4 p{
+	position: absolute;
+	top: -13px;
+}
+
+/*world news*/
+
+#scenario_box{
+	display: none;
+}
+
+#world_news_map{
+	position: absolute;
+	top: 50px;
+	left: 180px;
+	display: none;
+}
+
+#terrorism_header{
+	position: absolute;
+	top: 400px;
+	left: 450px;
+	display: none;
+	cursor: pointer;
+}
+
+#terrorism_header p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+
+    position: absolute;
+	top: -5px;
+	left: -220px;
+
+    text-align: center;
+}
+
+#organization_header{
+	position: absolute;
+	top: 430px;
+	left: 450px;
+		display: none;
+	cursor: pointer;
+	
+}
+
+#organization_header img{
+	transform: rotate(-10deg);
+}
+
+#organization_header p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+
+    position: absolute;
+	top: -5px;
+	left: -200px;
+	width: 200px;
+	text-align: center;
+}
+
+#transport_header{
+	position: absolute;
+	top: 430px;
+	left: 1080px;
+		display: none;
+	cursor: pointer;
+}
+
+#transport_header img{
+	transform: rotate(-160deg);
+}
+
+#transport_header p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+
+    position: absolute;
+	width: 200px;
+	left: 110px;
+	top: -20px;
+	text-align: center;
+}
+
+#migration_header{
+	
+	position: absolute;
+	top: 710px;
+	left: 910px;
+		display: none;
+	cursor: pointer;
+}
+
+#migration_header img{
+	transform: rotate(-80deg);
+}
+
+#migration_header p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	position: absolute;
+	width: 200px;
+	top: 60px;
+	left: -20px;
+	text-align: center;
+}
+
+#migration_header2{
+	
+	position: absolute;
+	top: 710px;
+	left: 910px;
+		display: none;
+}
+
+#migration_header2 img{
+	transform: rotate(-80deg);
+}
+
+#migration_header2 p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	position: absolute;
+	width: 200px;
+	top: 60px;
+	left: -20px;
+	text-align: center;
+}
+
+#power_header{
+	
+	position:absolute;
+	top: 800px;
+
+	left: 700px;
+	display: none;
+	cursor: pointer;
+}
+
+#power_header img{
+	transform: rotate(deg);
+}
+
+#power_header p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 200px;
+	text-align: center;
+	position: absolute;
+	top: -20px;
+	left: -180px;
+}
+
+#global_temperature{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	text-align: center;
+	 line-height: 2;
+	width: 600px;
+	position: absolute;
+	top: 30px;
+	left: 570px;
+	background-color: aliceblue;
+	border-radius: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: none;
+}
+
+
+#global_temperature2{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	text-align: center;
+	 line-height: 2;
+	width: 600px;
+	position: absolute;
+	top: 30px;
+	left: 570px;
+	background-color: aliceblue;
+	border-radius: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: none;
+}
+
+#global_temperature3{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	text-align: center;
+	 line-height: 2;
+	width: 600px;
+	position: absolute;
+	top: 30px;
+	left: 570px;
+	background-color: aliceblue;
+	border-radius: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: none;
+}
+
+#bioengineering_header{
+	position: absolute;
+	top: 530px;
+		left: 880px;
+		display: none;
+	cursor: pointer;
+}
+
+#bioengineering_header p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 200px;
+	text-align: center;
+	position: absolute;
+	left: 100px;
+}
+
+#child_header{
+	position: absolute;
+	left: 990px;
+	top: 500px;
+		display: none;
+	cursor: pointer;
+}
+
+#child_header p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 200px;
+	text-align: center;
+	position: absolute;
+	left: 230px;
+	top: -10px;
+}
+
+#world_news_content{
+	position: absolute;
+	top: 220px;
+	left: 370px;
+	display: none;
+}
+
+#world_news_content h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	position: absolute;
+	top: 30px;
+	left: 370px;
+}
+
+#world_news_content p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 800px;
+	position: absolute;
+	top: 150px;
+	left: 120px;
+	line-height: 1.5;
+}
+
+#close_content{
+	position: absolute;
+	top: 30px;
+	left: 40px;
+}
+
+#world_news_content2{
+	position: absolute;
+	top: 220px;
+	left: 370px;
+	display: none;
+}
+
+#world_news_content2 h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	position: absolute;
+	top: 30px;
+	left: 310px;
+}
+
+#world_news_content2 p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 800px;
+	position: absolute;
+	top: 150px;
+	left: 120px;
+	line-height: 1.5;
+}
+
+#world_news_content3{
+	position: absolute;
+	top: 220px;
+	left: 370px;
+	display: none;
+}
+
+#world_news_content3 h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	position: absolute;
+	top: 30px;
+	left: 310px;
+}
+
+#world_news_content3 p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 800px;
+	position: absolute;
+	top: 150px;
+	left: 120px;
+	line-height: 1.5;
+}
+
+#world_news_content4{
+	position: absolute;
+	top: 220px;
+	left: 370px;
+	display: none;
+}
+
+#world_news_content4 h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	position: absolute;
+	top: 30px;
+	left: 310px;
+}
+
+#world_news_content4 p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 800px;
+	position: absolute;
+	top: 150px;
+	left: 120px;
+	line-height: 1.5;
+}
+
+#world_news_content5{
+	position: absolute;
+	top: 220px;
+	left: 370px;
+	display: none;
+}
+
+#world_news_content5 h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	position: absolute;
+	top: 30px;
+	left: 310px;
+}
+
+#world_news_content5 p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 800px;
+	position: absolute;
+	top: 150px;
+	left: 120px;
+	line-height: 1.5;
+}
+
+#world_news_content6{
+	position: absolute;
+	top: 220px;
+	left: 370px;
+	display: none;
+}
+
+#world_news_content6 h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	position: absolute;
+	top: 30px;
+	left: 310px;
+}
+
+#world_news_content6 p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 800px;
+	position: absolute;
+	top: 150px;
+	left: 120px;
+	line-height: 1.5;
+}
+
+#world_news_content7{
+	position: absolute;
+	top: 220px;
+	left: 370px;
+	display: none;
+}
+
+#world_news_content7 h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	position: absolute;
+	top: 30px;
+	left: 350px;
+}
+
+#world_news_content7 p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 800px;
+	position: absolute;
+	top: 150px;
+	left: 120px;
+	line-height: 1.5;
+}
+
+#world_news_content8{
+	position: absolute;
+	top: 220px;
+	left: 370px;
+	display: none;
+}
+
+#world_news_content8 h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	position: absolute;
+	top: 30px;
+	left: 250px;
+}
+
+#world_news_content8 p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 800px;
+	position: absolute;
+	top: 150px;
+	left: 120px;
+	line-height: 1.5;
+}
+
+
+
+
+
+#strategy_box{
+	position: absolute;
+	top: 100px;
+	left: 400px;
+	width: 1000px;
+	display: none;
+}
+
+.strategy_frame{
+	float: left;
+	padding-left: 30px;
+	padding-top: 100px;
+	margin-left: 50px;
+}
+
+.strategy_frame h6{
+	 font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	text-align: center;
+	width: 150px;
+	margin-top: -150px;
+	margin-left: 40px;
+}
+
+.strategy_frame p{
+	 font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	text-align: center;
+	margin-left: 5px;
+	margin-top: -20px;
+}
+
+#awareness{
+	display: none;
+}
+
+#power{
+	display: none;
+}
+
+#emission{
+	display: none;
+}
+
+#organization{
+	display: none;
+}
+
+#transport{
+	display: none;
+	
+}
+
+#migration{
+	display: none;
+}
+
+#disease{
+	display: none;
+}
+
+#water{
+	display: none;
+}
+
+#bioengineering{
+	display: none;
+}
+
+#child{
+	display: none;
+}
+
+/*message page*/
+
+#message_box{
+	position: absolute;
+	top: 250px;
+	left: 600px;
+	display: none;
+}
+
+.message_frame{
+	padding-top: 50px;
+}
+
+.message_frame p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	text-align: center;
+	margin-top: -55px;
+	margin-right: 10px;
+}
+
+#message1{
+	display: none;
+	cursor: pointer;
+}
+
+#message2{
+	display: none;
+	cursor: pointer;
+}
+
+#message3{
+	display: none;
+	cursor: pointer;
+}
+
+#message4{
+	display: none;
+	cursor: pointer;
+}
+
+#message_power{
+	position: absolute;
+	top: 200px;
+	left: 430px;
+	z-index: 1;
+	display: none;
+}
+
+#message_power h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	text-align: center;
+	margin-top: -550px;
+}
+
+#message_power p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	margin-left: 70px;
+	line-height: 1.5;
+	width: 700px;
+}
+
+.close{
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	cursor: pointer;
+}
+
+.yes2{
+	position: absolute;
+	top: 400px;
+	left: 200px;
+	cursor: pointer;
+
+}
+
+.no2{
+	position: absolute;
+	top: 400px;
+	left: 400px;
+	cursor: pointer;
+	
+}
+
+#message_power2{
+	position: absolute;
+	top: 200px;
+	left: 430px;
+	z-index: 1;
+	display: none;
+}
+
+#message_power2 h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	text-align: center;
+	margin-top: -550px;
+}
+
+#message_power2 p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	margin-left: 70px;
+	line-height: 1.5;
+	width: 700px;
+}
+
+#message_power3{
+	position: absolute;
+	top: 200px;
+	left: 430px;
+	z-index: 1;
+	display: none;
+}
+
+#message_power3 h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	text-align: center;
+	margin-top: -550px;
+}
+
+#message_power3 p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	margin-left: 70px;
+	line-height: 1.5;
+	width: 700px;
+}
+
+#message_agreement{
+	position: absolute;
+	top: 200px;
+	left: 430px;
+	z-index: 1;
+	display: none;
+}
+
+#message_agreement h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	text-align: center;
+	margin-top: -550px;
+}
+
+#message_agreement p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	margin-left: 70px;
+	line-height: 1.5;
+	width: 700px;
+}
+
+#message_epidemics{
+	position: absolute;
+	top: 200px;
+	left: 430px;
+	z-index: 1;
+	display: none;
+}
+
+#message_epidemics h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	text-align: center;
+	margin-top: -550px;
+}
+
+#message_epidemics p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	margin-left: 70px;
+	line-height: 1.5;
+	width: 700px;
+}
+
+
+#message_heat{
+	position: absolute;
+	top: 200px;
+	left: 430px;
+	z-index: 1;
+	display: none;
+}
+
+#message_heat h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	text-align: center;
+	margin-top: -550px;
+}
+
+#message_heat p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	margin-left: 70px;
+	line-height: 1.5;
+	width: 700px;
+}
+
+#popup{
+	position: absolute;
+	top: 300px;
+	left: 600px;
+	z-index: 2;
+	display: none;
+}
+
+#popup h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	text-align: center;
+	margin-top: -350px;
+}
+
+#popup p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 400px;
+	line-height: 2;
+	position: absolute;
+	left: 55px;
+}
+
+#popup_button{
+	position: absolute;
+	top: 250px;
+	left: 170px;
+	cursor: pointer;
+}
+
+#popup_button p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	position: absolute;
+	top: -14px;
+left: 30px;
+}
+
+#popup2{
+	position: absolute;
+	top: 300px;
+	left: 600px;
+	z-index: 2;
+	display: none;
+}
+
+#popup2 h6{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 600;
+                font-style: normal;
+	text-align: center;
+	margin-top: -350px;
+}
+
+#popup2 p{
+	font-size: 20px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	width: 400px;
+	line-height: 2;
+	position: absolute;
+	left: 55px;
+}
+
+#popup_button2{
+	position: absolute;
+	top: 250px;
+	left: 170px;
+	cursor: pointer;
+}
+
+#popup_button2 p{
+	font-size: 15px;
+                font-family: proxima-nova,sans-serif;
+                font-weight: 400;
+                font-style: normal;
+	position: absolute;
+	top: -14px;
+left: 30px;
+}
+
+#scenario_test{
+	position: absolute;
+	top: 200px;
+	left: 50px;
+	font-size: 20px;
+}
+

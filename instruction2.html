@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fate of Climate Change</title>
+	<script src="js/instruction2.js"></script>
+    <style>
+     @font-face{
+            font-family:segoePrint;
+            src: url(fonts/segoepr.ttf);
+        }
+        body {margin: 0; background:#FCD9C8; }
+		
+		@keyframes bounce{
+				0%, 20%, 50%, 80%, 100%{transform: translateX(0);}
+				40% {transform: translateX(-30px);}
+				60% {transform: translateX(-15px);}
+			}
+		
+			@keyframes bounceInRight{
+				0% { 
+        opacity: 0; 
+        transform: translateX(10px); 
+    } 
+    60% { 
+        opacity: 1; 
+        transform: translateX(-30px); 
+    } 
+    80% { 
+        transform: translateX(10px); 
+    } 
+    100% { 
+        transform: translateX(0); 
+    } 
+			}
+		
+		#instruction_box{
+			position: absolute;
+			top: 8px;
+			animation-name: bounceInRight;
+				 animation-duration: 1s; 
+    animation-fill-mode: both; 
+    animation-timing-function: ease-out; 
+		}
+        
+        #arrow{
+            animation-name: bounce;
+				animation-duration: 1s;
+				animation-fill-mode: both;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+            position: absolute;
+            top: 70px;
+            left: 1100px;
+        }
+        
+        #instruction{
+             font-family: segoePrint;
+                color: #0068E9;
+                position: absolute;
+            top: 70px;
+            left: 1170px;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map">
+    <img src="img/map-01.png" width="1600">
+    </div>
+    
+	<div id="instruction_box">
+	   <div id="arrow">
+    <img src="img/arrow2.png" width="37.54">
+    </div>
+    
+    <div id="instruction">
+    Once you fulfill your job by the time of 2050, you will be able to see the the world of 2050 created based on your decisions.
+    </div>
+	</div>
+ 
+    
+</body>
+</html>

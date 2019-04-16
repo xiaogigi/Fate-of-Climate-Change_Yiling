@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Fate of Climate Change</title>
+		<link rel="stylesheet" href="homepage.css">
+		<link rel="stylesheet" href="https://use.typekit.net/elt4lwm.css">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="js/homepage.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	</head>
+
+	<body onload="move()">
+		<div id="greeting" data-aos="fade-down">
+		Now you're appointed to be the lead policymaker of UN who specifically focus on making climate policies.
+		</div>
+		
+		<div id="bear1">
+			<img src="img/polar%20bear%201.png" width="165.4">
+		</div>
+
+		<div id="bear2">
+			<img src="img/polar_bear_2.png" width="237.5">
+		</div>
+
+		<div id="head">
+			<h1>FATE OF CLIMATE CHANGE</h1>
+		</div>
+
+		<div id="head2" onclick="homepage()">
+			<h1>FATE OF CLIMATE CHANGE</h1>
+			<span class="tooltiptext6">
+			Click header to return to the homepage
+			</span>
+		</div>
+		<div id="year_text">
+			<p>Year</p>
+		</div>
+		
+		<div id="year_box">
+			<div id="year_bar"></div>
+			<span class="tooltiptext">
+			 Your mission will be over by the time of 2050. After game is over, you'll be directed to 2050 world scenarios.
+			</span>
+		</div>
+
+		<div id="year_number">
+			2020
+		</div>
+		<div id="signifier">
+			<img src="img/signifier2.png" width="12.75" height="10.75">
+		</div>
+
+		<div id="budget_text">
+			<p>Budget</p>
+		</div>
+		<div id="budget_box">
+			<div id="budget_bar"></div>
+			<span class="tooltiptext2">
+			 You start with a limited budget of 1000 million (1 billion) dollars. You will receive another 1000 million budget in the year of 2035.
+			</span>
+		</div>
+
+		<div id="budget_number">
+<!--			<p>800</p>-->
+			1000
+		</div>
+
+		<div id="bubble" onclick="strategy()">
+			<img src="img/conversation2.png" width="139.95" height="81.85">
+			<p>Your strategy</p>
+			<span class="tooltiptext3">
+			This is where you can check your strategies.
+			</span>
+		</div>
+
+		<div id="bubble2" onclick="your_message()">
+			<div id="red_dot">
+			<img src="img/red_dot.png">
+			</div>
+			<img src="img/thoughts.png" width="150">
+			<p>Your Message</p>
+			<span class="tooltiptext4">
+			Here's your message center. Red dots indicate you have unread message
+			</span>
+		</div>
+
+		<div id="mitigate" onclick="mitigate()">
+			<p>Commit to mitigate climate change</p>
+			<img src="img/icon1.png" width="100">
+			<span class="tooltiptext5">
+			 During the journey of this event, there are different political options you can choose. Be careful, you cannot get rid of a certain policy once you have chosen it.
+			</span>
+		</div>
+
+		<div id="adapt" onclick="adapt()">
+			<p>Commit to adapt to climate change</p>
+			<img src="img/icon2.png" width="100">
+		</div>
+
+		<!--	mitigate page-->
+
+		<div id="awareness_box" onclick = "budgetFunction_campaign()">
+			<div class = "awareness_explaination">
+				<img src="img/overlay.png" width="230">
+			<div class="explaination">
+				Host environmental action and awareness campaign to promote environmental awareness of public.
+				</div>
+			</div>
+			<img src="img/awareness_frame.png" width="230">
+			<h6>Eco-Awareness Campaign</h6>
+			<p>$200</p>
+		</div>
+
+		<div id="power_box" onclick="budgetFunction_power()">
+			<div class="power_explaination">
+			<img src="img/overlay.png" width="230">
+				<div class="explaination2">
+				Decarbonizing Power Generation: Invest in new technology of decarbonizing power generation and generate investments from other companies.
+				</div>
+			</div>
+			<img src="img/power_frame.png" width="230">
+			<h6>Decarbonizing Power Generation</h6>
+			<p>$600</p>
+		</div>
+
+		<div id="emission_box" onclick="budgetFunction_emission()">
+			<div class="emission_explaination">
+			<img src="img/overlay.png" width="230">
+				<div class="explaination3">
+			Set net zero emission goal by 2050.
+				</div>
+			</div>
+			<img src="img/emission_frame.png" width="230">
+			<h6>Net Zero Emission Programme</h6>
+			<p>$500</p>
+		</div>
+		
+		<div id="emission_popup">
+		<img src="img/popup_background.png" width="400">
+		<div id = "popup_button3" onclick="popup_button3()">
+			<img src="img/popup_button2.png" width="150">
+			<p>Okay</p>
+			</div>
+			<p>Your proposal about Net Zero Emission Programme have been rejected by most of the national congress in the world.</p>
+		</div>
+
+		<div id="organization_box" onclick="budgetFunction_organization()">
+			<div class="organization_explaination">
+			<img src="img/overlay.png" width="230">
+			<div class="explaination4">
+				Establish an independent environmental organization which is empowered to enact climate policies for different areas around the world. Only members from this organization are empowered to vote for the policies. The organization is able to go around national congress from each countries  and do what need to be done for climate change.
+			</div>
+			</div>
+			<img src="img/organization_frame.png" width="230">
+			<h6>Establish Independent Environmental Organization</h6>
+			<p>$500</p>
+		</div>
+
+		<div id="transport_box" onclick = "budgetFunction_transport()">
+			<div class="transport_explaination">
+				<img src="img/overlay.png" width="230">
+			<div class="explaination5">
+				Increase government subsidies for buying electric cars and commit to improve the charging infrastructure for electricity car.
+			</div>
+			</div>
+			<img src="img/transport_frame.png" width="230">
+			<h6>Swtich Transport to Electricity</h6>
+			<p>$700</p>
+		</div>
+
+		<!--	adapt page-->
+
+		<div id="migration_box" onclick="budgetFunction_migration()">
+			<div class = "migration_explaination">
+				<img src="img/overlay.png" width="230">
+			<div class="explaination6">
+			Release  new multilateral protection instrument covering climate migration
+				</div>
+			</div>
+		
+			<img src="img/migration_frame.png" width="230">
+			<h6>Massive Migration</h6>
+			<p>$600</p>
+		</div>
+
+		<div id="disease_box" onclick="budgetFunction_disease()">
+			<div class = "disease_explaination">
+				<img src="img/overlay.png" width="230">
+			<div class="explaination7">
+			Establish Infectious Disease Response Team
+				</div>
+			</div>
+			<img src="img/disease_frame.png" width="230">
+			<h6>Massive Disease Outbreaks</h6>
+			<p>$500</p>
+		</div>
+
+		<div id="water_box" onclick="budgetFunction_water()">
+			<div class = "water_explaination">
+				<img src="img/overlay.png" width="230">
+			<div class="explaination8">
+Improve water management system in Africa to
+improve drought adaptation.
+				</div>
+			</div>
+			<img src="img/water_frame.png" width="230">
+			<h6>Water Management Programme</h6>
+			<p>$700</p>
+		</div>
+
+		<div id="bioengineering_box" onclick="budgetFunction_bioengineering()">
+			<div class = "bioengineering_explaination">
+				<img src="img/overlay.png" width="230">
+			<div class="explaination9">
+Encourage the development of bioengineering to make agriculture more adaptive to climate change.
+				</div>
+			</div>
+			<img src="img/bioengineering_frame.png" width="230">
+			<h6>Enhance Bioengineering Technology</h6>
+			<p>$700</p>
+		</div>
+
+		<div id="child_box" onclick="budgetFunction_child()">
+			<div class = "child_explaination">
+				<img src="img/overlay.png" width="230">
+			<div class="explaination10">
+Enact one-child policy in India to control the population growth rate.
+				</div>
+			</div>
+			<img src="img/kid_frame.png" width="230">
+			<h6>One Child Policy</h6>
+			<p>$600</p>
+		</div>
+		
+		<div id="child_popup">
+		<img src="img/popup_background.png" width="400">
+			<div id="popup_button4" onclick = "popup_button3()">
+			<img src="img/popup_button2.png" width="150">
+			<p>Okay</p>
+			</div>
+			<p>The Indian National Congress rejected your proposal about one child policy due to some of the social issues it involved.</p>
+		</div>
+		
+		<!--	scenario page-->
+
+       <div id = "scenario_box">
+		<div id="world_news_map">
+			<img src="img/world_news_map.png" width="1300">
+		</div>
+
+		<div id="terrorism_header" onclick="terrorism_scenario()">
+			<img src="img/line.png" width="100">
+			<p>Seattle’s Street Eco-Terrorism</p>
+		</div>
+
+		<div id="organization_header" onclick="organization_scenario()">
+			<img src="img/line.png" width="100">
+			<p>Independent Environmental Organization of UN</p>
+		</div>
+
+		<div id="transport_header" onclick="transport_scenario()">
+			<img src="img/line.png" width="100">
+			<p>100% Transport Eletrificaiton in Shenzhen</p>
+		</div>
+
+		<div id="migration_header" onclick="migration_scenario()">
+			<img src="img/line.png" width="100">
+			<p>Situation of Massive Migration Is Getting Better</p>
+		</div>
+		
+		<div id="migration_header2" onclick="migration_scenario2()">
+			<img src="img/line.png" width="100">
+			<p>Massive Migration has stalled the development in Europe</p>
+		</div>
+
+		<div id="power_header" onclick="power_scenario()">
+			<img src="img/line.png" width="100">
+			<p>Energy Infrastructure Resolution Succeed</p>
+		</div>
+
+		<div id="global_temperature">
+			<p>Good news from IPCC that world have achieved the goal of net zero greenhouse emission in 2050. Thanks to the Independent Environmental Organization of United Nation enforced this goal to every single country in the world back in 2019. It’s global efforts. The increase of global temperature has been controlled within 1.5 degrees celsius.
+			</p>
+		</div>
+
+		<div id="global_temperature2">
+			<p>The latest IPCC report shows the global temperature has increased 1.5 degrees Celsius by 2050. Our world is suffering from increasing intensity and frequency of extreme events on resources, ecosystems, biodiversity, food security, cities, tourism and carbon removal. If we can't control the temperature rising another 0.5 degrees celsius, humans will be facing more catastrophic disasters.
+			</p>
+		</div>
+
+		<div id="global_temperature3">
+			<p>Urgent: The latest IPCC report shows that the global temperature has increased by 2 degrees celsius. Humans around the world are suffering from extremely intense and frequent extreme events. Earth is breaking down. Good luck to all of us.
+			</p>
+		</div>
+
+		<div id="bioengineering_header" onclick="bioengineering_scenario()">
+			<img src="img/line2.png" width="200">
+			<p>Uganda First Genetically Engineered Crops</p>
+		</div>
+
+		<div id="child_header" onclick="child_scenario()">
+			<img src="img/line3.png" width="200">
+			<p>Success of One Child Policy in India</p>
+		</div>
+		   
+		   </div>
+		
+		<div id="world_news_content">
+		<img src="img/world_news_frame.png" width="1000">
+		<div id="close_content" onclick="content_close()">
+			<img src="img/close.png">
+			</div>
+		<h6>Seattle’s Street Eco-Terrorism</h6>
+			<p>Seattle’s Street of Dreams is now a street of nightmares. The collection of multi million dollar luxury homes was recently burned to the ground by people claiming to be eco-terrorists. Eco-terror, to paraphrase the FBI, is defined as the use of violence against victims or property by an environmentally oriented group of environmental-political reasons. The FBI considers environmental terrorism to be the NO.1 domestic terror threat facing the U.S.
+Some of experts think the rising of eco-terrorists is resulted by the frequent eco-awareness campaign. They explained that with the increasing attention towards climate change, organizations with vicious purpose can incite people easily using climate change.
+</p>
+		</div>
+		
+		<div id="world_news_content2">
+		<img src="img/world_news_frame.png" width="1000">
+		<div id="close_content" onclick="content_close()">
+			<img src="img/close.png">
+			</div>
+		<h6>Independent Environmental Organization of UN</h6>
+			<p>United Nations has built an independent environmental organization which is empowered to enact climate policies for different areas around the world. Only members from this organization are empowered to vote for the policies. The organization is able to go around national congress from each countries  and do what need to be done for climate change.</p>
+		</div>
+		
+			<div id="world_news_content3">
+		<img src="img/world_news_frame.png" width="1000">
+		<div id="close_content" onclick="content_close()">
+			<img src="img/close.png">
+			</div>
+		<h6>100% Transport Eletrificaiton in Shenzhen</h6>
+			<p>In 30 years, Shenzhen has became the first city to electrify 100% of its public transport. Back to 2018, Shenzhen had already succeeded to replace all their public buses with electric buses. Following this green transit revolution, Shenzhen moved on to make all its taxis go electric, and their success of this action becomes an inspiration for the rest of world. Experts say:”The kind of sweeping changes that Shenzhen pulled off won’t come to U.S. cities without full national support and buy-in from local transit agencies.”</p>
+		</div>
+		
+		<div id="world_news_content4">
+		<img src="img/world_news_frame.png" width="1000">
+		<div id="close_content" onclick="content_close()">
+			<img src="img/close.png">
+			</div>
+		<h6>Energy Infrastructure Resolution Succeed</h6>
+			<p>These days the situation of massive migration is getting better and better. Thanks to the stable sea level, it dramatically decreases the possibility of massive migration for small island nations.</p>
+		</div>
+		
+		
+		<div id="world_news_content5">
+		<img src="img/world_news_frame.png" width="1000">
+		<div id="close_content" onclick="content_close()">
+			<img src="img/close.png">
+			</div>
+		<h6>Situation of Massive Migration Is Getting Better</h6>
+			<p>Today, all of our power plants has succeeded transforming from fossil fuel power generation to oxy-fuel generation. This transformation marks a big progress for humans cutting emissions.</p>
+		</div>
+		
+		<div id="world_news_content6">
+		<img src="img/world_news_frame.png" width="1000">
+		<div id="close_content" onclick="content_close()">
+			<img src="img/close.png">
+			</div>
+		<h6>Uganda First Genetically Engineered Crops</h6>
+			<p>Uganda has recently harvested its first crops genetically engineered using the new bioengineering technology. This kind of new crops is highly drought resistant and can be produced with less water. Most of other African countries have brought in this new technology to improve their countries’ food security.</p>
+		</div>
+		
+		<div id="world_news_content7">
+		<img src="img/world_news_frame.png" width="1000">
+		<div id="close_content" onclick="content_close()">
+			<img src="img/close.png">
+			</div>
+		<h6>Success of One Child Policy in India</h6>
+			<p>One child policy in India seems a big success in decreasing the poverty levels in India and relax the strain on limited natural resources. </p>
+		</div>
+		
+			<div id="world_news_content8">
+		<img src="img/world_news_frame.png" width="1000">
+		<div id="close_content" onclick="content_close()">
+			<img src="img/close.png">
+			</div>
+		<h6>Massive Migration has stalled the development in Europe</h6>
+			<p>These days European countries where massive climate migrants flooded into without legal citizenship status have identified massive political and economic strife, which has significantly stalled development in these regions.</p>
+		</div>
+		
+		
+		
+
+		<!--	strategy page-->
+
+		<div id="strategy_box">
+			<div class="strategy_frame" id="awareness">
+				<img src="img/awareness_frame.png" width="230">
+				<h6>Eco-Awareness Campaign</h6>
+				<p>$200</p>
+			</div>
+
+			<div class="strategy_frame" id="power">	
+				<img src="img/power_frame.png" width="230">
+				<h6>Decarbonizing Power Generation</h6>
+				<p>$600</p>
+			</div>
+			<div class="strategy_frame" id="emission">		 
+				<img src="img/emission_frame.png" width="230">
+				<h6>Net Zero Emission Programme</h6>
+				<p>$500</p>
+
+			</div>
+
+			<div class="strategy_frame" id="organization">	
+				<img src="img/organization_frame.png" width="230">
+				<h6>Establish Independent Environmental Organization</h6>
+				<p>$500</p>
+			</div>
+
+			<div class="strategy_frame" id="transport">	
+				<img src="img/transport_frame.png" width="238">
+				<h6>Swtich Transport to Electricity</h6>
+				<p>$700</p>
+			</div>
+
+			<div class="strategy_frame" id="migration">	
+				<img src="img/migration_frame.png" width="238">
+				<h6>Massive Migration</h6>
+				<p>$600</p>
+			</div>
+
+			<div class="strategy_frame" id="disease">
+				<img src="img/disease_frame.png" width="238">
+				<h6>Massive Disease Outbreaks</h6>
+				<p>$500</p>
+			</div>
+
+			<div class="strategy_frame" id="water">
+				<img src="img/water_frame.png" width="238">
+				<h6>Water Management Programme</h6>
+				<p>$700</p>
+			</div>
+
+			<div class="strategy_frame" id="bioengineering">
+				<img src="img/bioengineering_frame.png" width="238">
+				<h6>Enhance Bioengineering Technology</h6>
+				<p>$700</p>
+			</div>
+
+			<div class="strategy_frame" id="child">
+				<img src="img/kid_frame.png" width="238">
+				<h6>One Child Policy</h6>
+				<p>$600</p>
+			</div>
+		</div>
+		
+		<!--		message page-->
+
+			<div id="message_power">
+				<div class="close">
+					<img src="img/close.png"  onclick="close_window()">
+				</div>
+
+				<div class="yes2" onclick="yes_button()">
+					<img src="img/yes.png" width="200">
+				</div>
+
+				<div class="no2">
+					<img src="img/no.png" width="200" onclick="no2()">
+				</div>
+				<img src="img/message_frame2.png">
+				<h6>Progress on Decarbonizing Power Generation</h6>
+				<p>Oxy-fuel combustion technology has been created, but cannot be deployed at power plants on a massive scale, because of sheer scale and long life of our current energy infrastructure.<br><br>
+
+					If oxy-fuel technology wants to be delivered in the market, United Nation needs to cooperate with global national congress to create enabling conditions for the deployment of this technology. This might cost you $800. Do you wanna continue?</p>
+			</div>
+
+
+			<div id="message_power2">
+				<div class="close">
+					<img src="img/close.png"  onclick="close_window()">
+				</div>
+
+				<img src="img/message_frame2.png">
+				<h6>Progress on Decarbonizing Power Generation</h6>
+				<p>Decarbonizing Power Generation” has been removed from your strategy list.</p>
+			</div>
+		
+			<div id="message_power3">
+				<div class="close">
+					<img src="img/close.png"  onclick="close_window()">
+				</div>
+
+				<img src="img/message_frame2.png">
+				<h6>Progress on Decarbonizing Power Generation</h6>
+				<p>Sorry due to the Net Zero Emission Programme you cannot remove this from your strategy list.</p>
+			</div>
+
+			<div id="message_agreement">
+				<div class="close" onclick="close_window2()">
+					<img src="img/close.png"  onclick="close_window()">
+				</div>	
+				<img src="img/message_frame2.png">
+				<h6>International Agreement on Decarbonizing Power Generation</h6>
+				<p>These days, conutries from all over the world have shared a political will and sense of urgency of replacing traditional power generation technology with oxy-fuel technology. Our traditional energy infrastructure is seeing a big resolution.</p>
+			</div>
+
+
+			<div id="message_epidemics">
+				<div class="close" onclick="close_window3()">
+					<img src="img/close.png">
+				</div>	
+				<img src="img/message_frame2.png">
+				<h6>Epidemic Outbreak Events Are Under Control</h6>
+				<p>Thanks to the Infectious Disease Response Team of WHO, epidemic outbreak events happened in Saudi, Arabia, Nigeria and Brazil have been under control. The Infectious Disease Response Team is an international team that collaborates with the relevant government agencies in the affected countries and international partners to offer effective assistance to suppress the diseases as well as constrain the post-event risks.</p>
+			</div>
+
+
+			<div id="message_heat">
+				<div class="close" onclick="close_window4()">
+					<img src="img/close.png">
+				</div>	
+				<img src="img/message_frame2.png">
+				<h6>Extreme Heat Events in Africa</h6>
+				<p>Recently due to the increasing frequency of extreme heat events, many African countries are suffering from severe drought. But thanks to the efforts African countries put into water management these years, they still have reliable access to water. And agriculture hasn’t been affected greatly.
+				</p>
+			</div>
+
+
+
+			<div id="message_box">
+				<div class="message_frame" onclick="message_power()" id="message1">
+					<img src="img/message_frame.png" width="500">
+					<p>Progress on Decarbonizing Power Generation</p>
+				</div>
+				<div class="message_frame" onclick="message_agreement()" id="message2">
+					<img src="img/message_frame.png" width="500">
+					<p>International Agreement on Decarbonizing Power Generation</p>
+				</div>
+
+				<div class="message_frame" onclick="message_epidemics()" id="message3">
+					<img src="img/message_frame.png" width="500">
+					<p>Epidemic Outbreak Events Are Under Control</p>
+				</div>
+
+				<div class="message_frame" onclick="message_heat()" id="message4">
+					<img src="img/message_frame.png" width="500">
+					<p>Extreme Heat Events in Africa</p>
+				</div>
+			</div>
+		
+		<div id="popup">
+		<img src="img/popup_frame.png" width = "500">
+			<h6>News Flash</h6>
+			<p>Massive disease outbreaks have been detected in Saudi, Arabia, Nigeria and Brazil.</p>
+			<div id="popup_button" onclick="popup_close()">
+			<img src="img/popup_button.png" width="150">
+				<p>Okay, I got it.</p>
+			</div>
+		</div>
+		
+		<div id="popup2">
+		<img src="img/popup_frame.png" width = "500">
+			<h6>News Flash</h6>
+			<p>Extreme heat events are detected in Africa.</p>
+			<div id="popup_button2" onclick="popup_close()">
+			<img src="img/popup_button.png" width="150">
+				<p>Okay, I got it.</p>
+			</div>
+		</div>
+		
+<!--
+		<div id="scenario_test" onclick="scenario_test()">
+		scenario
+		</div>
+-->
+
+	</body>
+</html>
+
+<script>
+AOS.init({
+  duration: 1200});
+</script>
